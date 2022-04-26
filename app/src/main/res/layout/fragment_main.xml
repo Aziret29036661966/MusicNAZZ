@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainFragment"
+    android:background="#091227">
+
+    <ImageView
+        android:id="@+id/ic_search"
+        android:layout_marginRight="42dp"
+        android:layout_alignTop="@id/ic_menu"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/ic_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_menu" />
+
+    <TextView
+        android:id="@+id/txt_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ic_menu"
+        android:layout_alignLeft="@id/ic_menu"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/gilroy_bold"
+        android:text="My Playlist"
+        android:letterSpacing="0.05"
+        android:textColor="#EAF0FF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_songs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_head"
+        android:layout_alignLeft="@id/ic_menu"
+        android:layout_marginTop="20dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        tools:listitem="@layout/item_song" />
+
+</RelativeLayout>
